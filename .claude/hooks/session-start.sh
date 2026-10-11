@@ -3,6 +3,7 @@
 # - Installs npm dev dependencies so `node tests/run-all.js` and `npm run lint` work.
 # - Installs the playwright-cli binary used by .claude/skills/playwright-cli and points
 #   it at the Chromium preinstalled in the cloud image (Google Chrome is not available).
+# - Pre-fetches the Ruflo MCP server from .mcp.json so it starts within the MCP timeout.
 set -uo pipefail
 
 if [ "${CLAUDE_CODE_REMOTE:-}" != "true" ]; then
@@ -11,6 +12,7 @@ fi
 
 PROJECT_DIR="${CLAUDE_PROJECT_DIR:-$(pwd)}"
 PLAYWRIGHT_CLI_VERSION="0.1.22"
+RUFLO_CLI_PACKAGE="@claude-flow/cli@3.46.1" # keep in sync with .mcp.json
 CHROMIUM_PATH="/opt/pw-browsers/chromium"
 
 log() { echo "[SessionStart] $*" >&2; }
@@ -35,6 +37,10 @@ if [ "$installed" != "$PLAYWRIGHT_CLI_VERSION" ]; then
   if ! npm install --global --ignore-scripts --no-audit --no-fund "@playwright/cli@${PLAYWRIGHT_CLI_VERSION}" >/dev/null 2>&1; then
     log "could not install @playwright/cli@${PLAYWRIGHT_CLI_VERSION}"
   fi
+fi
+
+if ! npx -y "$RUFLO_CLI_PACKAGE" --version >/dev/null 2>&1; then
+  log "could not pre-fetch ${RUFLO_CLI_PACKAGE}; the claude-flow MCP server may time out"
 fi
 
 if [ -x "$CHROMIUM_PATH" ] && [ -n "${CLAUDE_ENV_FILE:-}" ]; then

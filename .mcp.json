@@ -3,6 +3,10 @@
     "chrome-devtools": {
       "command": "npx",
       "args": ["-y", "chrome-devtools-mcp@1.10.1"]
+    },
+    "claude-flow": {
+      "command": "npx",
+      "args": ["-y", "@claude-flow/cli@3.46.1", "mcp", "start"]
     }
   }
 }

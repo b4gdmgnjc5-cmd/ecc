@@ -107,3 +107,10 @@ ecc2/target/
 assets/images/security/badrudi-exploit.mp4
 
 .aider*
+
+# Ruflo (claude-flow) MCP runtime state
+.claude-flow/
+.swarm/
+.ruflo/
+.hive-mind/
+/ruvector.db
