@@ -1,0 +1,13 @@
+{
+  "source": "https://github.com/JohnHeibel/ClaudeAnimationBase",
+  "created_at": "2026-10-14T10:28:17Z",
+  "confidence": 1,
+  "author": "John Heibel",
+  "commit": "0ac8bf2b31942376cb6b8c4074715595d512acd2",
+  "license": "MIT",
+  "local_changes": [
+    "kit vendored under kit/",
+    "dropped kit/docs/emotions.webp (README animation)",
+    "SKILL.md wrapper written for this repo"
+  ]
+}

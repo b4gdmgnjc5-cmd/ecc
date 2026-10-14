@@ -5,6 +5,15 @@ module.exports = [
     {
         ignores: ['.opencode/dist/**', '.cursor/**', 'node_modules/**', '.venv/**', 'venv/**', 'coverage/**', 'workflows/**/*.workflow.*', '.claude/workflows/**']
     },
+    {
+        // Vendored third-party skills, kept as upstream ships them (see each .provenance.json)
+        ignores: [
+            '.claude/skills/onetake-videogen/**',
+            '.claude/skills/gbro-collage-broll/**',
+            '.claude/skills/claude-animation-base/kit/**',
+            '.claude/skills/lemo-opuscar/**'
+        ]
+    },
     js.configs.recommended,
     {
         languageOptions: {
