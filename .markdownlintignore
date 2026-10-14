@@ -1,0 +1,5 @@
+# Vendored third-party skills, kept as upstream ships them (see each .provenance.json)
+.claude/skills/onetake-videogen/
+.claude/skills/gbro-collage-broll/
+.claude/skills/claude-animation-base/kit/
+.claude/skills/lemo-opuscar/

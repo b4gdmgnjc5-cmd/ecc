@@ -1,0 +1,12 @@
+{
+  "source": "https://github.com/Nael-Nathanael/onetake-videogen",
+  "created_at": "2026-10-14T10:28:17Z",
+  "confidence": 1,
+  "author": "Nael Nathanael",
+  "commit": "654226f0c921e532bc666bdc1abfcda8581ed417",
+  "license": "MIT",
+  "local_changes": [
+    "dropped .claude/ (upstream maintainer metadata)",
+    "wrote the U+26A1 emoji as the \\u26A1 escape in references/explainer.md and remotion/src/Root.tsx (repo unicode-safety check); same value at runtime"
+  ]
+}

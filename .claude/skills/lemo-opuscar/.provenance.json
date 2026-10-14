@@ -1,0 +1,11 @@
+{
+  "source": "https://github.com/lemomo-ai/lemo-opuscar",
+  "created_at": "2026-10-14T10:28:17Z",
+  "confidence": 1,
+  "author": "Lemomo (LemoLab)",
+  "commit": "fdc46d7f0e20cc953a71d56241a92d1b4cb7298e",
+  "license": "MIT",
+  "local_changes": [
+    "copied plugin/skills/lemo-opuscar/ and the repo LICENSE"
+  ]
+}

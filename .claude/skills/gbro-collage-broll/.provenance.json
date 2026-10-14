@@ -1,0 +1,11 @@
+{
+  "source": "https://github.com/pyang5166/gbro-collage-broll",
+  "created_at": "2026-10-14T10:28:17Z",
+  "confidence": 1,
+  "author": "pyang5166",
+  "commit": "a1a4ee2e2abf7d44e460026b706d0c72c2cf8a91",
+  "license": "MIT",
+  "local_changes": [
+    "dropped assets/ (README demo GIFs)"
+  ]
+}
