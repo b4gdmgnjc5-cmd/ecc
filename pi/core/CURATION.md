@@ -1,6 +1,6 @@
 # Curation
 
-pi/core includes 123 of 293 skills and 24 of 94 commands from the root of ECC.
+pi/core includes 123 of 294 skills and 24 of 94 commands from the root of ECC.
 Everything excluded is listed here with its reason.
 
 ## Rules
@@ -24,6 +24,7 @@ Exclude anything that:
 | `agentic-os` | Claude-Code-only persistent OS mechanics (slash commands, memory, schedules) |
 | `ai-regression-testing` | workflow creates Claude Code custom slash commands (.claude/commands) |
 | `article-writing` | content/marketing writing, not engineering |
+| `ask-gpt` | requires external Codex CLI at runtime |
 | `automation-audit-ops` | ECC ops audit of hooks/connectors/MCP surfaces |
 | `autonomous-agent-harness` | Claude-Code-only autonomous harness (hooks, scheduling, computer use) |
 | `autonomous-loops` | Claude-Code-only autonomous loops |
