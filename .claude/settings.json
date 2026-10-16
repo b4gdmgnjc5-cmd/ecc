@@ -1,0 +1,13 @@
+{
+  "extraKnownMarketplaces": {
+    "ecc": {
+      "source": {
+        "source": "github",
+        "repo": "b4gdmgnjc5-cmd/ecc"
+      }
+    }
+  },
+  "enabledPlugins": {
+    "ecc@ecc": true
+  }
+}
