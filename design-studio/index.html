@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Motif Studio</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Atelier de personnalisation : designs sur T-shirts, sweats, casquettes, mugs, affiches et tout objet.">
+<meta name="theme-color" content="#1d2130">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&family=Anton&family=Bebas+Neue&family=Oswald:wght@400;700&family=Montserrat:wght@400;800;900&family=Poppins:wght@400;700;900&family=Playfair+Display:ital,wght@0,700;1,700&family=Lobster&family=Pacifico&family=Permanent+Marker&family=Bangers&family=Righteous&family=Abril+Fatface&family=Dancing+Script:wght@700&family=Caveat:wght@700&family=Rubik+Mono+One&family=Black+Ops+One&family=Press+Start+2P&family=Monoton&family=Shrikhand&family=Archivo+Black&family=Roboto+Slab:wght@400;800&family=Cinzel:wght@700&family=Fredoka:wght@500;700&family=Bungee&family=Satisfy&family=Orbitron:wght@700;900&family=Russo+One&family=Lora:ital,wght@0,700;1,700&display=swap">
+<link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+<!--APP-START-->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-shirt" viewBox="0 0 24 24"><path d="M8 3 3 6l2 4 2-1v12h10V9l2 1 2-4-5-3a4 4 0 0 1-8 0z"/></symbol>
+    <symbol id="i-text" viewBox="0 0 24 24"><path d="M5 6V4h14v2M12 4v16M9 20h6"/></symbol>
+    <symbol id="i-image" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="m21 16-5-5-9 9"/></symbol>
+    <symbol id="i-shapes" viewBox="0 0 24 24"><circle cx="7.5" cy="7.5" r="4.5"/><rect x="13" y="13" width="8" height="8" rx="1"/><path d="m17 3 4 7h-8z"/></symbol>
+    <symbol id="i-brush" viewBox="0 0 24 24"><path d="M18 3 9 12l3 3 9-9a2.1 2.1 0 0 0-3-3zM8 14c-2 0-3 1.5-3 3.5S4 20 3 21c3 0 7-1 7-4.5"/></symbol>
+    <symbol id="i-layers" viewBox="0 0 24 24"><path d="m12 3 9 5-9 5-9-5zM3 13l9 5 9-5"/></symbol>
+    <symbol id="i-sliders" viewBox="0 0 24 24"><path d="M4 7h10M18 7h2M4 17h4M12 17h8"/><circle cx="16" cy="7" r="2"/><circle cx="10" cy="17" r="2"/></symbol>
+    <symbol id="i-undo" viewBox="0 0 24 24"><path d="M9 14 4 9l5-5"/><path d="M4 9h11a5 5 0 0 1 0 10h-3"/></symbol>
+    <symbol id="i-redo" viewBox="0 0 24 24"><path d="m15 14 5-5-5-5"/><path d="M20 9H9a5 5 0 0 0 0 10h3"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+    <symbol id="i-minus" viewBox="0 0 24 24"><path d="M5 12h14"/></symbol>
+    <symbol id="i-fit" viewBox="0 0 24 24"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></symbol>
+    <symbol id="i-cube" viewBox="0 0 24 24"><path d="m12 2 9 5v10l-9 5-9-5V7z"/><path d="m3 7 9 5 9-5M12 12v10"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v12m-5-5 5 5 5-5M4 19h16"/></symbol>
+    <symbol id="i-folder" viewBox="0 0 24 24"><path d="M3 6a1 1 0 0 1 1-1h5l2 2h9a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z"/></symbol>
+    <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></symbol>
+    <symbol id="i-eyeoff" viewBox="0 0 24 24"><path d="M3 3l18 18M10.6 5.1A10 10 0 0 1 12 5c6 0 10 7 10 7a17 17 0 0 1-3.2 3.9M6.5 6.6C3.8 8.3 2 12 2 12s4 7 10 7a9.6 9.6 0 0 0 4.4-1.1"/></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></symbol>
+    <symbol id="i-unlock" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 7.5-2"/></symbol>
+    <symbol id="i-trash" viewBox="0 0 24 24"><path d="M4 7h16M9 7V4h6v3M6 7l1 13h10l1-13"/></symbol>
+    <symbol id="i-copy" viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V5a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h3"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+    <symbol id="i-keyboard" viewBox="0 0 24 24"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M6 10h.01M10 10h.01M14 10h.01M18 10h.01M7 14h10"/></symbol>
+    <symbol id="i-grid" viewBox="0 0 24 24"><path d="M3 3h18v18H3zM9 3v18M15 3v18M3 9h18M3 15h18"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1 6.2-5.5-2.9-5.5 2.9 1-6.2L3 9.6l6.2-.9z"/></symbol>
+    <symbol id="i-select" viewBox="0 0 24 24"><path d="m5 3 14 8-6 2-3 6z"/></symbol>
+    <symbol id="i-desktop" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="1"/><path d="M8 20h8M12 16v4"/></symbol>
+  </defs>
+</svg>
+
+<div class="app" id="app">
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span class="brand-name">Motif<b>Studio</b></span>
+    </div>
+    <div class="views" id="viewTabs" role="tablist" aria-label="Face de l'objet"></div>
+    <div class="top-actions">
+      <button class="icon-btn" id="btnUndo" title="Annuler (Ctrl+Z)" aria-label="Annuler"><svg><use href="#i-undo"/></svg></button>
+      <button class="icon-btn" id="btnRedo" title="Rétablir (Ctrl+Y)" aria-label="Rétablir"><svg><use href="#i-redo"/></svg></button>
+      <span class="sep pro"></span>
+      <div class="zoom pro">
+        <button class="icon-btn" id="btnZoomOut" title="Zoom arrière (-)" aria-label="Zoom arrière"><svg><use href="#i-minus"/></svg></button>
+        <button class="zoom-val" id="zoomVal" title="Ajuster à l'écran (0)">100 %</button>
+        <button class="icon-btn" id="btnZoomIn" title="Zoom avant (+)" aria-label="Zoom avant"><svg><use href="#i-plus"/></svg></button>
+      </div>
+      <button class="icon-btn pro" id="btnGrid" title="Grille en cm (G)" aria-label="Grille"><svg><use href="#i-grid"/></svg></button>
+      <button class="icon-btn pro" id="btnKeys" title="Raccourcis clavier (?)" aria-label="Raccourcis"><svg><use href="#i-keyboard"/></svg></button>
+      <span class="sep pro"></span>
+      <button class="btn ghost pro" id="btn3d"><svg><use href="#i-cube"/></svg><span>Aperçu 3D</span></button>
+      <div class="menu-wrap">
+        <button class="btn ghost" id="btnProject" aria-haspopup="true"><svg><use href="#i-folder"/></svg><span class="hide-sm">Projet</span></button>
+        <div class="menu" id="projectMenu" hidden>
+          <button data-act="new">Nouveau projet</button>
+          <button data-act="open">Ouvrir un projet (.json)</button>
+          <button data-act="save">Enregistrer le projet (.json)</button>
+          <hr>
+          <button data-act="mode">Basculer mode PC / mobile</button>
+        </div>
+      </div>
+      <button class="btn primary" id="btnExport"><svg><use href="#i-download"/></svg><span class="hide-sm">Exporter</span></button>
+    </div>
+  </header>
+
+  <nav class="rail" id="rail" aria-label="Outils">
+    <button data-tool="product" class="active"><svg><use href="#i-shirt"/></svg><span>Produit</span></button>
+    <button data-tool="text"><svg><use href="#i-text"/></svg><span>Texte</span></button>
+    <button data-tool="image"><svg><use href="#i-image"/></svg><span>Image</span></button>
+    <button data-tool="shapes"><svg><use href="#i-shapes"/></svg><span>Formes</span></button>
+    <button data-tool="draw"><svg><use href="#i-brush"/></svg><span>Dessin</span></button>
+    <button data-tool="props" class="mobile-only"><svg><use href="#i-sliders"/></svg><span>Style</span></button>
+    <button data-tool="layers" class="mobile-only"><svg><use href="#i-layers"/></svg><span>Calques</span></button>
+  </nav>
+
+  <aside class="panel sheet" id="toolPanel" aria-label="Panneau d'outils">
+    <div class="sheet-head"><span class="sheet-title" id="toolTitle">Produit</span><button class="icon-btn sheet-close" aria-label="Fermer"><svg><use href="#i-close"/></svg></button></div>
+
+    <section class="tool" data-panel="product">
+      <h3>Objet</h3>
+      <div class="product-grid" id="productGrid"></div>
+      <h3>Couleur principale</h3>
+      <div class="swatches" id="mainSwatches"></div>
+      <div class="row"><label for="mainColor">Personnalisée</label><input type="color" id="mainColor" value="#ffffff"></div>
+      <h3>Couleur des finitions</h3>
+      <p class="hint" id="trimHint">Col, bords-côtes, visière, anse…</p>
+      <div class="swatches small" id="trimSwatches"></div>
+      <div class="row"><label for="trimColor">Personnalisée</label><input type="color" id="trimColor" value="#ffffff"></div>
+      <h3>Forme et options</h3>
+      <div id="productOptions" class="stack"></div>
+      <div id="customUpload" class="stack" hidden>
+        <label class="drop" for="customFile"><input type="file" id="customFile" accept="image/*"><span>Importer la photo de ton objet</span><small>PNG détouré conseillé</small></label>
+      </div>
+      <h3>Rendu</h3>
+      <div class="row"><label for="material">Matière</label>
+        <select id="material"><option value="cotton">Coton</option><option value="heather">Chiné</option><option value="smooth">Lisse</option><option value="gloss">Brillant</option></select></div>
+      <div class="row"><label for="realism">Ombres réalistes</label><input type="checkbox" id="realism" class="switch" checked></div>
+      <div class="row pro"><label for="clipToArea">Masquer hors zone d'impression</label><input type="checkbox" id="clipToArea" class="switch" checked></div>
+    </section>
+
+    <section class="tool" data-panel="text" hidden>
+      <button class="btn primary block" id="addText"><svg><use href="#i-plus"/></svg>Ajouter un texte</button>
+      <h3>Styles prêts à l'emploi</h3>
+      <div class="presets" id="textPresets"></div>
+      <h3>Polices</h3>
+      <div class="font-list" id="fontList"></div>
+    </section>
+
+    <section class="tool" data-panel="image" hidden>
+      <label class="drop big" for="imageFile"><input type="file" id="imageFile" accept="image/*,.svg" multiple>
+        <svg><use href="#i-image"/></svg><span>Importer une image</span><small>PNG, JPG, WebP ou SVG (vectoriel). Glisser-déposer et coller (Ctrl+V) acceptés.</small></label>
+      <p class="hint">Astuce : dans Style, « Retirer le fond blanc » détoure un logo sur fond blanc. La qualité d'impression (DPI) s'affiche pour chaque image.</p>
+      <h3>Remplir la zone</h3>
+      <div class="btn-row"><button class="btn" id="imgFit">Ajuster</button><button class="btn" id="imgFill">Remplir</button></div>
+    </section>
+
+    <section class="tool" data-panel="shapes" hidden>
+      <h3>Formes</h3>
+      <div class="icon-grid" id="shapeGrid"></div>
+      <h3>Pictos</h3>
+      <div class="icon-grid" id="clipartGrid"></div>
+      <h3>Emojis</h3>
+      <div class="emoji-grid" id="emojiGrid"></div>
+    </section>
+
+    <section class="tool" data-panel="draw" hidden>
+      <div class="row"><label for="drawMode">Mode dessin</label><input type="checkbox" id="drawMode" class="switch"></div>
+      <div class="row pro"><label for="brushType">Pinceau</label>
+        <select id="brushType"><option value="pencil">Crayon</option><option value="spray">Aérographe</option><option value="circle">Points</option></select></div>
+      <div class="row"><label for="brushColor">Couleur</label><input type="color" id="brushColor" value="#1d2130"></div>
+      <div class="row"><label for="brushWidth">Épaisseur <output id="brushWidthOut">8</output></label><input type="range" id="brushWidth" min="1" max="80" value="8"></div>
+      <div class="row pro"><label for="brushShadow">Lueur</label><input type="range" id="brushShadow" min="0" max="40" value="0"></div>
+      <p class="hint">Chaque trait devient un calque modifiable. Désactive le mode dessin pour sélectionner.</p>
+    </section>
+  </aside>
+
+  <main class="stage" id="stage">
+    <div class="stage-scroll" id="stageScroll">
+      <div class="canvas-host" id="canvasHost"><canvas id="designCanvas"></canvas></div>
+    </div>
+    <div class="stage-hud">
+      <span id="hudProduct">T-shirt</span><span class="dot"></span><span id="hudArea">Zone 30 × 40 cm</span>
+    </div>
+    <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+  </main>
+
+  <aside class="inspector sheet" id="inspector" aria-label="Propriétés">
+    <div class="sheet-head"><span class="sheet-title" id="inspTitle">Style</span><button class="icon-btn sheet-close" aria-label="Fermer"><svg><use href="#i-close"/></svg></button></div>
+    <div class="tabs desktop-only" role="tablist">
+      <button class="tab active" data-itab="props">Propriétés</button>
+      <button class="tab" data-itab="layers">Calques</button>
+    </div>
+    <div class="itab" data-ipanel="props" id="propsPanel"></div>
+    <div class="itab" data-ipanel="layers" id="layersPanel" hidden>
+      <div class="layer-actions">
+        <button class="btn sm pro" id="lyGroup" title="Grouper (Ctrl+G)">Grouper</button>
+        <button class="btn sm pro" id="lyUngroup" title="Dégrouper (Ctrl+Maj+G)">Dégrouper</button>
+        <button class="btn sm pro" id="lyMask" title="Masquer le calque du dessous avec la forme du dessus">Masque</button>
+      </div>
+      <ul class="layers" id="layerList"></ul>
+      <p class="hint" id="layersEmpty">Aucun calque pour cette face. Ajoute un texte, une image ou une forme.</p>
+    </div>
+  </aside>
+</div>
+
+<dialog class="modal" id="exportDlg">
+  <form method="dialog" class="modal-body" id="exportForm">
+    <div class="modal-head"><h2>Exporter</h2><button class="icon-btn" value="cancel" aria-label="Fermer"><svg><use href="#i-close"/></svg></button></div>
+    <fieldset class="choice-grid" id="exportTypes">
+      <label><input type="radio" name="etype" value="mockup" checked><span><b>Maquette PNG</b><small>Objet + design, pour présenter ou vendre</small></span></label>
+      <label class="pro"><input type="radio" name="etype" value="mockupjpg"><span><b>Maquette JPG</b><small>Fichier léger, fond uni</small></span></label>
+      <label class="pro"><input type="radio" name="etype" value="print"><span><b>Fichier d'impression</b><small>PNG transparent à la taille réelle en DPI</small></span></label>
+      <label class="pro"><input type="radio" name="etype" value="svg"><span><b>SVG vectoriel</b><small>Design seul ou maquette complète</small></span></label>
+      <label class="pro"><input type="radio" name="etype" value="pdf"><span><b>PDF imprimeur</b><small>Taille réelle, traits de coupe, fiche technique</small></span></label>
+      <label><input type="radio" name="etype" value="json"><span><b>Projet</b><small>Fichier .json à rouvrir plus tard</small></span></label>
+    </fieldset>
+    <div class="stack" id="exportOpts">
+      <div class="row" data-for="mockup mockupjpg"><label for="exSize">Largeur</label>
+        <select id="exSize"><option value="1200">1200 px</option><option value="2400" class="pro">2400 px</option><option value="4000" class="pro">4000 px</option></select></div>
+      <div class="row" data-for="print pdf"><label for="exDpi">Résolution</label>
+        <select id="exDpi"><option value="150">150 DPI (brouillon)</option><option value="300" selected>300 DPI (impression)</option><option value="600">600 DPI (sérigraphie fine)</option></select></div>
+      <div class="row" data-for="mockup mockupjpg"><label for="exBg">Fond</label>
+        <select id="exBg"><option value="transparent">Transparent</option><option value="#ffffff">Blanc</option><option value="#eceef3">Gris studio</option><option value="#1d2130">Nuit</option></select></div>
+      <div class="row" data-for="svg"><label for="exSvgMode">Contenu</label>
+        <select id="exSvgMode"><option value="design">Design seul (zone d'impression)</option><option value="mockup">Maquette complète</option></select></div>
+      <div class="row pro" data-for="mockup mockupjpg print svg pdf"><label for="exViews">Faces</label>
+        <select id="exViews"><option value="current">Face actuelle</option><option value="all">Toutes les faces</option></select></div>
+    </div>
+    <p class="hint" id="exportInfo"></p>
+    <div class="modal-foot"><button class="btn ghost" value="cancel">Annuler</button><button class="btn primary" id="doExport" value="default">Exporter</button></div>
+  </form>
+</dialog>
+
+<dialog class="modal wide" id="dlg3d">
+  <div class="modal-body">
+    <div class="modal-head"><h2>Aperçu 3D</h2>
+      <div class="btn-row">
+        <label class="inline"><input type="checkbox" id="auto3d" checked> Rotation auto</label>
+        <select id="bg3d" aria-label="Fond"><option value="#e9ebf1">Studio clair</option><option value="#1b1e29">Studio sombre</option><option value="#f3e9dc">Sable</option></select>
+        <button class="btn sm" id="shot3d">Capture PNG</button>
+        <button class="icon-btn" id="close3d" aria-label="Fermer"><svg><use href="#i-close"/></svg></button>
+      </div>
+    </div>
+    <div class="view3d" id="view3d"><p class="hint center" id="msg3d">Préparation du rendu…</p></div>
+    <p class="hint">Glisser pour tourner, molette pour zoomer, double-clic pour recentrer.</p>
+  </div>
+</dialog>
+
+<dialog class="modal" id="keysDlg">
+  <form method="dialog" class="modal-body">
+    <div class="modal-head"><h2>Raccourcis clavier</h2><button class="icon-btn" value="cancel" aria-label="Fermer"><svg><use href="#i-close"/></svg></button></div>
+    <div class="keys">
+      <div><kbd>Ctrl</kbd>+<kbd>Z</kbd> / <kbd>Y</kbd></div><span>Annuler / rétablir</span>
+      <div><kbd>Ctrl</kbd>+<kbd>C</kbd> / <kbd>V</kbd> / <kbd>D</kbd></div><span>Copier / coller / dupliquer</span>
+      <div><kbd>Suppr</kbd></div><span>Supprimer la sélection</span>
+      <div><kbd>←↑→↓</kbd> (+<kbd>Maj</kbd>)</div><span>Déplacer de 1 px (10 px)</span>
+      <div><kbd>Ctrl</kbd>+<kbd>G</kbd> / <kbd>Maj</kbd>+<kbd>G</kbd></div><span>Grouper / dégrouper</span>
+      <div><kbd>Ctrl</kbd>+<kbd>]</kbd> / <kbd>[</kbd></div><span>Avancer / reculer d'un plan</span>
+      <div><kbd>Ctrl</kbd>+<kbd>A</kbd></div><span>Tout sélectionner</span>
+      <div><kbd>T</kbd> <kbd>R</kbd> <kbd>E</kbd> <kbd>B</kbd></div><span>Texte, rectangle, ellipse, pinceau</span>
+      <div><kbd>+</kbd> <kbd>-</kbd> <kbd>0</kbd></div><span>Zoom, ajuster</span>
+      <div><kbd>G</kbd></div><span>Grille en centimètres</span>
+      <div><kbd>Ctrl</kbd>+<kbd>S</kbd> / <kbd>E</kbd></div><span>Enregistrer / exporter</span>
+    </div>
+  </form>
+</dialog>
+
+<input type="file" id="projectFile" accept=".json,application/json" hidden>
+<!--APP-END-->
+<!--LIBS-START-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/5.3.1/fabric.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<!--LIBS-END-->
+<script src="js/products.js"></script>
+<script src="js/assets.js"></script>
+<script src="js/editor.js"></script>
+<script src="js/inspector.js"></script>
+<script src="js/exporter.js"></script>
+<script src="js/preview3d.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

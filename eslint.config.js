@@ -35,6 +35,22 @@ module.exports = [
         }
     },
     {
+        // Motif Studio: browser app (plain scripts sharing the window.DS namespace)
+        ignores: ['design-studio/dist/**']
+    },
+    {
+        files: ['design-studio/js/**/*.js', 'design-studio/sw.js'],
+        languageOptions: {
+            sourceType: 'script',
+            globals: {
+                ...globals.browser,
+                ...globals.serviceworker,
+                fabric: 'readonly',
+                THREE: 'readonly'
+            }
+        }
+    },
+    {
         files: ['**/*.mjs'],
         languageOptions: {
             sourceType: 'module'
