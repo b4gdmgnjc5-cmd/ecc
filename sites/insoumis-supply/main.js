@@ -59,7 +59,7 @@ async function boot() {
   setLoad(15);
   try {
     await Promise.race([
-      Promise.all(['400 100px "Bodoni Moda"', '800 100px "Bodoni Moda"', 'italic 500 100px "Bodoni Moda"', '500 14px Manrope']
+      Promise.all(['400 100px "Bodoni Moda"', '700 100px "Bodoni Moda"', 'italic 500 100px "Bodoni Moda"', '500 14px Manrope']
         .map((f) => document.fonts.load(f))),
       new Promise((r) => setTimeout(r, 2500)),
     ]);
@@ -156,7 +156,6 @@ function start(renderer) {
     const rail = new THREE.Mesh(new THREE.CylinderGeometry(0.018, 0.018, railLen, 16), brass);
     rail.rotation.x = Math.PI / 2;
     rail.position.set(x, RAIL_Y, railStart - railLen / 2);
-    rail.castShadow = true;
     scene.add(rail);
     for (let z = railStart; z >= lastZ - 2.01; z -= railLen / 5) {
       const cable = new THREE.Mesh(new THREE.CylinderGeometry(0.004, 0.004, 4.4 - RAIL_Y, 6), brass);
@@ -183,7 +182,7 @@ function start(renderer) {
     built.pivot.rotation.y = baseYaw;
     scene.add(built.pivot);
 
-    const spot = new THREE.SpotLight(0xffe2c2, 0, 9, 0.36, 0.85, 1.4);
+    const spot = new THREE.SpotLight(0xfff2e6, 0, 9, 0.36, 0.85, 1.4);
     spot.position.set(x * 0.6, 4.35, z + 1.2);
     spot.target.position.set(x, 1.5, z);
     spot.castShadow = !coarse;
@@ -195,7 +194,7 @@ function start(renderer) {
     const beam = new THREE.Mesh(
       new THREE.CylinderGeometry(0.06, 1.0, beamH, 32, 1, true),
       new THREE.MeshBasicMaterial({
-        color: 0xffe2c2, alphaMap: beamMap, transparent: true, opacity: 0, depthWrite: false,
+        color: 0xfff2e6, alphaMap: beamMap, transparent: true, opacity: 0, depthWrite: false,
         blending: THREE.AdditiveBlending, side: THREE.DoubleSide, fog: false,
       }),
     );
@@ -417,7 +416,7 @@ function start(renderer) {
       // Every piece keeps a low light; the one in front of you gets the full spot.
       const lit = inside * (0.35 + 0.65 * Math.max(w, hoverBoost * 0.6));
       it.spot.intensity = lerp(it.spot.intensity, lit * 26, 0.08);
-      it.beam.material.opacity = lerp(it.beam.material.opacity, lit * 0.07, 0.08);
+      it.beam.material.opacity = lerp(it.beam.material.opacity, lit * 0.03, 0.08);
     });
     finaleLight.intensity = lerp(finaleLight.intensity, 18 * smooth(PRODUCTS.length - 0.8, PRODUCTS.length, f), 0.06);
 

@@ -65,7 +65,8 @@ export function memeTexture(lines, ink, { italic = false, w = 1024, h = 1024 } =
   ctx.fillStyle = ink;
   ctx.textAlign = 'center';
   ctx.textBaseline = 'alphabetic';
-  const weight = italic ? 'italic 500' : '800';
+  ctx.fontKerning = 'normal';
+  const weight = italic ? 'italic 500' : '700';
   const maxW = w * 0.9;
   const sizes = lines.map((l) => {
     ctx.font = `${weight} 100px ${SERIF}`;
@@ -125,9 +126,9 @@ export function finaleTexture() {
   const [c, ctx] = canvas(2048, 1152);
   ctx.fillStyle = '#0c0c0d';
   ctx.fillRect(0, 0, 2048, 1152);
-  ctx.globalAlpha = 0.9;
-  drawMark(ctx, 1024, 520, 560, '#b8996a');
+  tricolourRule(ctx, 1024, 380, 240, 6);
+  ctx.globalAlpha = 0.85;
+  drawMark(ctx, 1024, 640, 340, '#b8996a');
   ctx.globalAlpha = 1;
-  tricolourRule(ctx, 1024, 900, 360, 8);
   return toTexture(c);
 }

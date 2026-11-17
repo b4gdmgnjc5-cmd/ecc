@@ -34,6 +34,6 @@ export const PRODUCTS = [
   {
     id: 'peuple', type: 'tote', name: 'Tote « Je suis le peuple »', price: 22,
     fabric: '#E6DECB', ink: '#1F3FA6', sizes: ['Unique'],
-    print: { kind: 'meme', lines: ['JE SUIS', 'LE PEUPLE'] }, detail: 'Toile 340 g · anses bleu et rouge',
+    print: { kind: 'meme', lines: ['Je suis', 'le peuple'], italic: true }, detail: 'Toile 340 g · anses bleu et rouge',
   },
 ];
