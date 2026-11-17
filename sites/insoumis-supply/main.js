@@ -41,7 +41,7 @@ let stops = [];
 let dMax = 0;
 function computeStops() {
   const portrait = innerWidth / innerHeight < 0.9;
-  view = portrait ? 3.9 : 3.3;
+  view = portrait ? 4.1 : 3.7;
   stops = layout.map((l) => START_Z - (l.z + view));
   dMax = START_Z - (lastZ - 2.2);
 }
@@ -154,13 +154,11 @@ function start(renderer) {
     rail.position.set(x, RAIL_Y, railStart - railLen / 2);
     rail.castShadow = true;
     scene.add(rail);
-    for (let z = railStart; z >= lastZ - 2.01; z -= railLen / 5) {
-      const post = new THREE.Mesh(new THREE.CylinderGeometry(0.025, 0.025, RAIL_Y, 8), black);
-      post.position.set(x, RAIL_Y / 2, z);
-      post.castShadow = true;
-      const foot = new THREE.Mesh(new THREE.BoxGeometry(0.5, 0.03, 0.18), black);
-      foot.position.set(x, 0.015, z);
-      scene.add(post, foot);
+    // Rails hang from the ceiling on thin cables: nothing blocks the aisle view.
+    for (let z = railStart; z >= lastZ - 2.01; z -= railLen / 6) {
+      const cable = new THREE.Mesh(new THREE.CylinderGeometry(0.006, 0.006, 4, 6), black);
+      cable.position.set(x, RAIL_Y + 2, z);
+      scene.add(cable);
     }
   });
 
@@ -320,7 +318,9 @@ function start(renderer) {
   }
 
   addEventListener('keydown', (e) => {
-    if (blocked(e) || (e.target && e.target.closest && e.target.closest('button, a, input'))) return;
+    if (blocked(e)) return;
+    // Let Space/Enter activate a focused button, but arrows always drive the dressing.
+    if ((e.key === ' ' || e.key === 'Enter') && e.target.closest && e.target.closest('button, a, input')) return;
     const f = Math.round(fractionAt(target));
     if (['ArrowDown', 'ArrowRight', 'PageDown', ' '].includes(e.key)) {
       e.preventDefault();

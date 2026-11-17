@@ -363,7 +363,7 @@ button { font: inherit; color: inherit; }
 .cart__items small { display: block; font-family: var(--mono); font-size: 11px; color: #555; }
 .cart__qty { display: flex; align-items: center; gap: 6px; font-family: var(--mono); font-weight: 700; }
 .cart__qty button { width: 28px; height: 28px; border: var(--line); background: none; cursor: pointer; }
-.cart__empty { padding: 30px 16px; font-family: var(--mono); font-size: 13px; }
+.cart__items li.cart__empty { display: block; padding: 30px 16px; font-family: var(--mono); font-size: 13px; }
 .cart__foot { padding: 16px; border-top: var(--line); display: flex; flex-direction: column; gap: 12px; padding-bottom: max(16px, env(safe-area-inset-bottom)); }
 .cart__total { display: flex; justify-content: space-between; font-family: var(--display); font-size: 28px; }
 
@@ -403,3 +403,6 @@ button { font: inherit; color: inherit; }
   .grain, .marquee__track, .hero__hint { animation: none; }
   .flash.is-on { animation-duration: .01s; }
 }
+
+.finale .btn--ghost { color: var(--cream); border-color: var(--cream); }
+.finale .btn--ghost:hover { background: var(--cream); color: var(--ink); }
