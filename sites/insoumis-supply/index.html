@@ -3,122 +3,79 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <title>Insoumis Supply — Dressing de lutte</title>
-  <meta name="description" content="Boutique militante indépendante : t-shirts, hoodies et accessoires engagés. Non affiliée à La France insoumise." />
-  <meta name="theme-color" content="#111111" />
+  <title>Maison Insoumise</title>
+  <meta name="description" content="Collection Tricolore : six pièces militantes, présentées dans une boutique de nuit en 3D. Boutique indépendante, non affiliée à La France insoumise." />
+  <meta name="theme-color" content="#0a0a0b" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;600;800;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
   <script type="importmap">
     { "imports": { "three": "./vendor/three.module.min.js" } }
   </script>
 </head>
 <body>
-  <canvas id="scene" aria-label="Dressing 3D : faites défiler pour parcourir les produits"></canvas>
-  <div class="grain" aria-hidden="true"></div>
+  <canvas id="scene" aria-label="Boutique 3D : faites défiler pour passer d'une pièce à l'autre"></canvas>
 
-  <!-- Loader -->
-  <div id="loader" class="loader">
-    <span class="loader__word">ON</span><span class="loader__word">S'HABILLE</span><span class="loader__word loader__word--red">POUR LA LUTTE</span>
-    <div class="loader__bar"><i id="loaderBar"></i></div>
+  <div id="loader" class="loader" aria-hidden="true">
+    <span class="loader__mark">Maison Insoumise</span>
+    <span class="loader__line"><i id="loaderBar"></i></span>
   </div>
 
-  <!-- Header -->
   <header class="top">
-    <a class="brand" href="#" id="homeLink" aria-label="Insoumis Supply, retour au début">
-      <span class="brand__mark">IS</span>
-      <span class="brand__name">INSOUMIS<br />SUPPLY&nbsp;CO.</span>
-    </a>
-    <nav class="top__nav" id="sectionNav" aria-label="Rayons"></nav>
-    <div class="top__actions">
-      <button class="btn btn--ghost" id="listToggle" aria-pressed="false">Vue liste</button>
-      <button class="btn btn--cart" id="cartBtn" aria-haspopup="dialog">Panier <b id="cartCount">0</b></button>
-    </div>
+    <a class="brand" href="#" id="homeLink">Maison Insoumise</a>
+    <button class="link" id="cartBtn" aria-haspopup="dialog">Panier (<span id="cartCount">0</span>)</button>
   </header>
 
-  <div class="marquee" aria-hidden="true">
-    <div class="marquee__track">
-      <span>★ ON LÂCHE RIEN ★ L'AVENIR EN COMMUN ★ PARTAGEZ LES RICHESSES ★ 6ᵉ RÉPUBLIQUE ★ FIN DU MONDE, FIN DU MOIS : MÊME COMBAT ★ UNION POPULAIRE </span>
-      <span>★ ON LÂCHE RIEN ★ L'AVENIR EN COMMUN ★ PARTAGEZ LES RICHESSES ★ 6ᵉ RÉPUBLIQUE ★ FIN DU MONDE, FIN DU MOIS : MÊME COMBAT ★ UNION POPULAIRE </span>
-    </div>
-  </div>
-
-  <!-- Hero (zoomed through on scroll) -->
   <section id="hero" class="hero" aria-label="Introduction">
-    <p class="hero__kicker">Collection hiver 2026 · Merch militant indépendant</p>
-    <h1 class="hero__title">
-      <span>LE DRESSING</span>
-      <span class="hero__title--red">DE LA</span>
-      <span>LUTTE</span>
-    </h1>
-    <p class="hero__hint">
-      <span class="hint-desktop">Molette ↓ pour entrer dans le dressing</span>
-      <span class="hint-touch">Glissez ↑ ou écartez deux doigts pour entrer</span>
-    </p>
+    <p class="hero__eyebrow"><span class="tri" aria-hidden="true"></span>Collection Tricolore</p>
+    <h1 class="hero__title">Maison<br /><em>Insoumise</em></h1>
+    <p class="hero__hint"><span class="hint-desktop">Défilez pour entrer</span><span class="hint-touch">Glissez pour entrer</span></p>
   </section>
 
-  <!-- Section flash -->
-  <div id="sectionFlash" class="flash" aria-hidden="true"></div>
-
-  <!-- Product HUD -->
   <aside id="hud" class="hud" aria-live="polite">
-    <div class="hud__meta">
-      <span id="hudIndex">01 / 12</span>
-      <span id="hudSection">T-SHIRTS</span>
+    <div class="hud__id">
+      <h2 id="hudName" class="hud__name">—</h2>
+      <p class="hud__sub"><span id="hudPrice"></span> · <span id="hudDetail"></span></p>
     </div>
-    <h2 id="hudName" class="hud__name">—</h2>
-    <p id="hudTag" class="hud__tag"></p>
-    <div class="hud__row">
-      <span id="hudPrice" class="hud__price">25 €</span>
-      <div id="hudSizes" class="sizes" role="radiogroup" aria-label="Taille"></div>
-    </div>
-    <button id="hudAdd" class="btn btn--add">Ajouter au panier +</button>
+    <div id="hudSizes" class="sizes" role="radiogroup" aria-label="Taille"></div>
+    <button id="hudAdd" class="cta">Ajouter au panier</button>
   </aside>
 
-  <!-- Progress -->
-  <div class="progress" aria-hidden="true">
-    <div class="progress__fill" id="progressFill"></div>
-    <div class="progress__ticks" id="progressTicks"></div>
-  </div>
+  <div class="progress" aria-hidden="true"><i id="progressFill"></i></div>
 
-  <!-- Finale -->
-  <section id="finale" class="finale" aria-label="Fin du dressing">
-    <h2 class="finale__title"><span>REJOINS</span><span class="finale__red">LE MOUVEMENT</span></h2>
-    <p class="finale__text">Chaque achat finance l'impression de tracts, d'affiches et de matériel pour les collectifs locaux.</p>
+  <section id="finale" class="finale" aria-label="Fin de la collection">
+    <h2 class="finale__title"><em>Merci.</em></h2>
     <div class="finale__actions">
-      <button class="btn btn--add" id="finaleCart">Voir mon panier · <span id="finaleTotal">0 €</span></button>
-      <button class="btn btn--ghost" id="restart">↺ Reprendre depuis le début</button>
+      <button class="cta" id="finaleCart">Voir le panier · <span id="finaleTotal">0 €</span></button>
+      <button class="link" id="restart">Revoir la collection</button>
     </div>
   </section>
 
-  <!-- List view -->
-  <section id="listView" class="list" aria-label="Tous les produits" hidden>
-    <div class="list__inner">
-      <h2 class="list__title">TOUT LE DRESSING</h2>
-      <div class="list__grid" id="listGrid"></div>
-    </div>
+  <section id="listView" class="list" aria-label="La collection" hidden>
+    <h2 class="list__title">La collection</h2>
+    <div class="list__grid" id="listGrid"></div>
   </section>
 
-  <!-- Cart drawer -->
   <div id="cart" class="cart" role="dialog" aria-modal="true" aria-labelledby="cartTitle" hidden>
     <div class="cart__backdrop" data-close></div>
     <div class="cart__panel">
       <div class="cart__head">
-        <h2 id="cartTitle">PANIER</h2>
-        <button class="btn btn--ghost" data-close aria-label="Fermer le panier">Fermer ✕</button>
+        <h2 id="cartTitle">Panier</h2>
+        <button class="link" data-close id="cartClose">Fermer</button>
       </div>
       <ul class="cart__items" id="cartItems"></ul>
       <div class="cart__foot">
         <div class="cart__total"><span>Total</span><b id="cartTotal">0 €</b></div>
-        <button class="btn btn--add" disabled title="Démo : paiement non branché">Commander (démo)</button>
+        <button class="cta" disabled title="Démonstration : paiement non branché">Commander</button>
+        <p class="cart__note">Démonstration · paiement non branché</p>
       </div>
     </div>
   </div>
 
-  <footer class="legal">Boutique militante indépendante · non affiliée à La France insoumise · Site de démonstration</footer>
+  <footer class="legal">Boutique indépendante, non affiliée à La France insoumise</footer>
 
-  <noscript><p class="noscript">Ce dressing 3D a besoin de JavaScript.</p></noscript>
+  <noscript><p class="noscript">Cette boutique 3D a besoin de JavaScript.</p></noscript>
   <script type="module" src="main.js"></script>
 </body>
 </html>
